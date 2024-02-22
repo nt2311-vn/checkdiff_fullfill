@@ -1,3 +1,4 @@
+import time
 from verify_files import verify_files
 from calculate_differences import calculate_differences
 from write_result import write_result
@@ -15,11 +16,13 @@ def main():
             "Analyze data complete, hold result of reconcile data and result differences data...."
         )
         keys = list(result_data.keys())
-        print(f"There are {len(keys)} day(s) with difference in fulfill data as below")
+        print(f"There are {len(keys)} day(s) with differences in fulfillment")
         print("Writing result to result folder")
 
-        write_result(reconcile_data)
+        time.sleep(0.5)
+        write_result(reconcile_data, result_data)
 
+        time.sleep(1)
         print("Writing reconcile data complete")
 
     except FileNotFoundError:

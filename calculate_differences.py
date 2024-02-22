@@ -1,5 +1,7 @@
+import time
 import pandas as pd
 from pacman_bar import pacman_bar
+from spinner import spinner
 
 
 def calculate_differences():
@@ -17,6 +19,10 @@ def calculate_differences():
     print(
         f"There are total number of {len(set_unique_item)} item code, across {len(set_unique_date)} days to check"
     )
+
+    print("Start checking data...")
+
+    spinner(duration=3)
 
     for index, date in enumerate(set_unique_date, start=1):
         for item in set_unique_item:
@@ -40,6 +46,7 @@ def calculate_differences():
                     result_table[date] = {}
                 result_table[date][item] = net_qty
 
+        time.sleep(0.1)
         pacman_bar(index, len(set_unique_date))
 
     print("\nFinished checking differences")

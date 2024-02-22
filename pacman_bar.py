@@ -14,6 +14,6 @@ def pacman_bar(current_index, total_number):
     else:
         bar = fill_char * (block - 1) + lead_char + "-" * (bar_length - block)
 
-    text = f"\rCheck diff progress: [{bar}] {progress * 100:.2f}%"
+    text = f"\rProgress:[{bar}] {progress * 100:.2f}%"
     sys.stdout.write(text)
     sys.stdout.flush()
