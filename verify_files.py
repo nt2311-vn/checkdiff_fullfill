@@ -7,7 +7,7 @@ def verify_files():
     if len(num_files) != 2:
         raise Exception("Required exactly two files: IF and WO in the files folder")
 
-    for file in os.listdir("./data/"):
+    for file in num_files:
         file_type = file.split(".")[-1]
         file_name = file.split(".")[0]
 

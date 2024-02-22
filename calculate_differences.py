@@ -1,5 +1,5 @@
 import pandas as pd
-from pandas.compat import sys
+from pacman_bar import pacman_bar
 
 
 def calculate_differences():
@@ -40,15 +40,8 @@ def calculate_differences():
                     result_table[date] = {}
                 result_table[date][item] = net_qty
 
-        progress_percent = index / len(set_unique_date)
-        bar_length = 60
-        block = int(round(bar_length * progress_percent))
-        text = "\rProgress:[{0}] {1:.2f}%".format(
-            "#" * block + "-" * (bar_length - block), progress_percent * 100
-        )
-        sys.stdout.write(text)
-        sys.stdout.flush()
+        pacman_bar(index, len(set_unique_date))
 
-    print()
+    print("\nFinished checking differences")
 
     return (reconcile_table, result_table)
