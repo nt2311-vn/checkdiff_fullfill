@@ -11,8 +11,12 @@ def calculate_differences():
     set_unique_item = set(fulfill_data["Item"]).union(set(workorder_data["Item"]))
     set_unique_date = set(fulfill_data["Date"]).union(set(workorder_data["Date"]))
 
-    for date in set_unique_date:
-        reconcile_table[date] = {}
+    print(
+        f"There are total number of {len(set_unique_item)} items, across {len(set_unique_date)} days to check"
+    )
+
+    for date in sorted(set_unique_date):
+        print(f"Checking differences in date: {date}")
 
         for item in set_unique_item:
             fulfill_qty = fulfill_data[
@@ -25,11 +29,16 @@ def calculate_differences():
 
             net_qty = fulfill_qty - order_qty
 
-            if net_qty == 0:
-                reconcile_table[date][item] = net_qty
-            else:
-                reconcile_table[date][item] = net_qty
-                result_table[date] = {}
+            if date not in reconcile_table:
+                reconcile_table[date] = {}
+
+            reconcile_table[date][item] = net_qty
+
+            if net_qty != 0:
+                if date not in result_table:
+                    result_table[date] = {}
                 result_table[date][item] = net_qty
+
+        print(f"Finished checking differences in date: {date}")
 
     return (reconcile_table, result_table)
