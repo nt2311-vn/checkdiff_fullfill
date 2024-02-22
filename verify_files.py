@@ -2,7 +2,7 @@ import os
 
 
 def verify_files():
-    num_files = os.listdir("./data/")
+    num_files = [f for f in os.listdir("./data/") if f not in [".gitkeep"]]
 
     if len(num_files) != 2:
         raise Exception("Required exactly two files: IF and WO in the files folder")
