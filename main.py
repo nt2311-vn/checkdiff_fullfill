@@ -2,15 +2,14 @@ import pandas as pd
 from verify_files import verify_files
 
 
-file1 = "./data/IF.csv"
-file2 = "./data/WO.csv"
-
-
 def main():
     try:
         verify_files()
-        fulfill_data = pd.read_csv(file1)
-        workorder_data = pd.read_csv(file2)
+
+        dataIF = "./data/IF.csv"
+        dataWO = "./data/WO.csv"
+        fulfill_data = pd.read_csv(dataIF)
+        workorder_data = pd.read_csv(dataWO)
         fulfill_table = {}
 
         list_fulfill_item = list(fulfill_data._series["Item"])
