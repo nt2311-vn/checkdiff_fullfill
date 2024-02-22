@@ -19,18 +19,16 @@ def main():
             fulfill_table[date] = {}
 
             for item in set_unique_item:
-                fulfill_table[date][item] = 0
+                fulfill_qty = fulfill_data[
+                    (fulfill_data["Item"] == item) & (fulfill_data["Date"] == date)
+                ]["Quantity"].sum()
 
-                fulfill_table[date][item] += (
-                    fulfill_data._series["Quantity"].eq(item).eq(date).sum()
-                )
+                order_qty = workorder_data[
+                    (workorder_data["Item"] == item) & (workorder_data["Date"] == date)
+                ]["Quantity"].sum()
 
-                fulfill_table[date][item] -= (
-                    workorder_data._series["Quantity"].eq(item).eq(date).sum()
-                )
-
-                if fulfill_table[date][item] == 0:
-                    del fulfill_table[date][item]
+                if fulfill_qty - order_qty != 0:
+                    fulfill_table[date][item] = fulfill_qty - order_qty
 
         keys = list(fulfill_table.keys())
 
