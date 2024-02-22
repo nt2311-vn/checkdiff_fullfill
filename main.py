@@ -2,8 +2,8 @@ import pandas as pd
 from verify_files import verify_files
 
 
-file1 = "./files/IF.csv"
-file2 = "./files/WO.csv"
+file1 = "./data/IF.csv"
+file2 = "./data/WO.csv"
 
 
 def main():
