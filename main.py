@@ -12,20 +12,33 @@ def main():
         workorder_data = pd.read_csv(dataWO)
         fulfill_table = {}
 
-        list_fulfill_item = list(fulfill_data._series["Item"])
-        list_workorder_item = list(workorder_data._series["Item"])
-        set_unique_item = set(list_fulfill_item + list_workorder_item)
-
-        print(f"Unique items: {len(set_unique_item)}")
-
-        list_fulfill_date = list(fulfill_data._series["Date"])
-        list_workorder_date = list(workorder_data._series["Date"])
-        set_unique_date = set(list_fulfill_date + list_workorder_date)
-
-        print(f"Number of unique: {len(set_unique_date)}")
+        set_unique_item = set(fulfill_data["Item"]).union(set(workorder_data["Item"]))
+        set_unique_date = set(workorder_data["Date"]).union(set(workorder_data["Date"]))
 
         for date in set_unique_date:
-            print(f"Unique date: {date}")
+            fulfill_table[date] = {}
+
+            for item in set_unique_item:
+                fulfill_table[date][item] = 0
+
+                fulfill_table[date][item] += (
+                    fulfill_data._series["Quantity"].eq(item).eq(date).sum()
+                )
+
+                fulfill_table[date][item] -= (
+                    workorder_data._series["Quantity"].eq(item).eq(date).sum()
+                )
+
+                if fulfill_table[date][item] == 0:
+                    del fulfill_table[date][item]
+
+        keys = list(fulfill_table.keys())
+
+        for key in keys:
+            if fulfill_table[key] == {}:
+                del fulfill_table[key]
+
+        print(f"Final result of table: {fulfill_table}")
 
     except FileNotFoundError:
         print("File not found. Please check the file path and try again.")
