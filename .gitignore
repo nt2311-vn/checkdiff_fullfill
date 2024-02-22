@@ -1,3 +1,5 @@
 __pycache__/
-data/
+data/*.csv
+result/*.txt
+result/*.csv
 .env
