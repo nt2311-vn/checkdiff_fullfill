@@ -13,7 +13,7 @@ def main():
         fulfill_table = {}
 
         set_unique_item = set(fulfill_data["Item"]).union(set(workorder_data["Item"]))
-        set_unique_date = set(workorder_data["Date"]).union(set(workorder_data["Date"]))
+        set_unique_date = set(fulfill_data["Date"]).union(set(workorder_data["Date"]))
 
         for date in set_unique_date:
             fulfill_table[date] = {}
@@ -27,8 +27,10 @@ def main():
                     (workorder_data["Item"] == item) & (workorder_data["Date"] == date)
                 ]["Quantity"].sum()
 
-                if fulfill_qty - order_qty != 0:
-                    fulfill_table[date][item] = fulfill_qty - order_qty
+                net_qty = fulfill_qty - order_qty
+
+                if net_qty != 0:
+                    fulfill_table[date][item] = net_qty
 
         keys = list(fulfill_table.keys())
 
@@ -42,4 +44,5 @@ def main():
         print("File not found. Please check the file path and try again.")
 
 
-main()
+if __name__ == "__main__":
+    main()
