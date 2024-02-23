@@ -57,15 +57,16 @@ To use this package, you need to install the following:
 
 Run this command to start the program:
 
-**For Windows**
-```sh
-python main.py
-```
+    **For Windows**
+    ```sh
+    python main.py
+    ```
 
-**For MacOS and Linux**
-```sh
-python3 main.py
-```
+    **For MacOS and Linux**
+    ```sh
+    python3 main.py
+    ```
+
 1. Your result will be in result folder:
     - result_reconcile: Is the total check item differences between fulfill and work order in each date
     - result_diff: Is the work order id need to close for matching between fullfil quantity and work order quantity.
