@@ -45,3 +45,13 @@ To use this package, you need to install the following:
     ```sh
         pip install pyarrow
     ```
+### Usage guides
+1. Clone the repositories to your local machine
+    ```sh
+    git clone git@github.com:nt2311-vn/checkdiff_fullfill.git
+    ```
+
+1. Export two dataset as csv as link above and named IF.csv, WO.csv as their nature and move to data folder
+
+1. Use and command line (cmd) or terminal and move to the download folders
+
