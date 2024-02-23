@@ -12,7 +12,13 @@ I suggest using with my dataset if you don't have a well set up search:
 ### Required installs
 1. Git
 1. Python:
-Python with version 3.8+ will be working fine with this package
+Python with version 3.8+ will be working fine with this package<br>
  *Dependencies:*
- - pandas
- - pyarrow
+ - pandas<br>
+ ```sh
+    pip install pandas
+ ```
+ - pyarrow<br>
+ ```sh
+    pip install pyarrow
+ ```
