@@ -51,10 +51,10 @@ To use this package, you need to install the following:
     git clone git@github.com:nt2311-vn/checkdiff_fullfill.git
     ```
 
-1. Export two dataset as csv and named IF.csv, WO.csv as their nature. Move to folder **data**
+2. Export two dataset as csv and named IF.csv, WO.csv as their nature. Move to folder **data**
 
 
-1. Use and command line (cmd) or terminal, make sure your terminal or cmd is at this folder.
+3. Use and command line (cmd) or terminal, make sure your terminal or cmd is at this folder.
 Run this command to start the program:
 
     **For Windows**
@@ -69,6 +69,6 @@ Run this command to start the program:
     ```
 
 
-1. Your result will be in result folder:
+4. Your result will be in result folder:
     - result_reconcile: Is the total check item differences between fulfill and work order in each date
     - result_diff: Is the work order id need to close for matching between fullfil quantity and work order quantity.
