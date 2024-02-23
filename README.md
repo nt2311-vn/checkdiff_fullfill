@@ -66,4 +66,6 @@ python main.py
 ```sh
 python3 main.py
 ```
-
+1. Your result will be in result folder:
+    - result_reconcile: Is the total check item differences between fulfill and work order in each date
+    - result_diff: Is the work order id need to close for matching between fullfil quantity and work order quantity.
