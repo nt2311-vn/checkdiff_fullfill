@@ -57,16 +57,16 @@ To use this package, you need to install the following:
 1. Use and command line (cmd) or terminal, make sure your terminal or cmd is at this folder.
 Run this command to start the program:
 
-**For Windows**
-```sh
-python main.py
-```
+    **For Windows**
+    ```sh
+    python main.py
+    ```
 
 
-**For MacOS and Linux**
-```sh
-python3 main.py
-```
+    **For MacOS and Linux**
+    ```sh
+    python3 main.py
+    ```
 
 
 1. Your result will be in result folder:
