@@ -33,12 +33,15 @@ To use this package, you need to install the following:
     3. **Verify Python Installation**:
         - Open Command Prompt or Terminal and type `python --version`. You should see the version of Python you installed.
 
+    #### Installing Dependencies:
+    After installing Python, install the required packages using pip:
+
  - **Dependencies**:
-    - pandas<br>
+    - **pandas**:
     ```sh
         pip install pandas
     ```
-    - pyarrow<br>
+    - **pyarrow**:
     ```sh
         pip install pyarrow
     ```
