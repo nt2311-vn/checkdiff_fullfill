@@ -2,9 +2,14 @@
 
 ## IMPORTANTS:
 The package it self is a tool help you quickly check differences between quantity fulfill with quantity in work order creation.
-But it's **you** to have responsibilities to download and provide data **correctly**
+But it's **YOU** to have responsibilities to download and provide data **CORRECTLY**
+Below is two provided link, I already set up in netsuite for the data set of workorder and fulfillment
+I suggest using with my dataset if you don't have a well set up search:
+- [IF](https://5574610.app.netsuite.com/app/common/search/searchresults.nl?searchid=2243&whence=)
+- [WO](https://5574610.app.netsuite.com/app/common/search/searchresults.nl?searchid=2637&whence=)
 
-###Install requirements
+
+### Required installs
 1. Git
 1. Python:
 Python with version 3.8+ will be working fine with this package
