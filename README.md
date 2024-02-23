@@ -54,7 +54,6 @@ To use this package, you need to install the following:
 1. Export two dataset as csv and named IF.csv, WO.csv as their nature. Move to folder **data**
 
 1. Use and command line (cmd) or terminal, make sure your terminal or cmd is at this folder.
-
 Run this command to start the program:
 
 **For Windows**
