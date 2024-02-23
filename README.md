@@ -51,7 +51,19 @@ To use this package, you need to install the following:
     git clone git@github.com:nt2311-vn/checkdiff_fullfill.git
     ```
 
-1. Export two dataset as csv as link above and named IF.csv, WO.csv as their nature. Move to datasets to folder data
+1. Export two dataset as csv and named IF.csv, WO.csv as their nature. Move to folder **data**
 
-1. Use and command line (cmd) or terminal, make sure your terminal or cmd is at this folder
+1. Use and command line (cmd) or terminal, make sure your terminal or cmd is at this folder.
+
+Run this command to start the program:
+
+**For Windows**
+```sh
+python main.py
+```
+
+**For MacOS and Linux**
+```sh
+python3 main.py
+```
 
