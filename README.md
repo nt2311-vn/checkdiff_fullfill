@@ -4,7 +4,7 @@
 The package it self is a tool help you quickly check differences between quantity fulfill with quantity in work order creation.
 But it **is your responsibilities** to download and provide data **CORRECTLY**
 
-Below are two links, already set up in Netsuite, for the data set of workorder and fulfillment. I suggest using with my dataset if you don't have a well set up search:
+Below are two links, already set up in Netsuite, for the data set of workorder and fulfillment. I suggest using my dataset if you don't have a well set up one:
 - **IF**: [Item fullfilment dataset](https://5574610.app.netsuite.com/app/common/search/searchresults.nl?searchid=2243&whence=)
 - **WO**: [Work order dataset](https://5574610.app.netsuite.com/app/common/search/searchresults.nl?searchid=2637&whence=)
 
@@ -13,6 +13,16 @@ To use this package, you need to install the following:
 
 
 1. **Git**
+    1. **Download the Git Installer**:
+    - Go to the [Git website](https://git-scm.com/download/win) to download the Git installer for Windows.
+
+    2. **Run the Installer**:
+    - Execute the downloaded `.exe` file and follow the installation wizard. Accept the default settings or customize as per your preferences.
+
+    3. **Verify Installation**:
+    - Open Command Prompt and type `git --version` to verify the installation. You should see the installed Git version displayed.
+
+
 1. **Python** (Version 3.8+ is recommended):
  - **Dependencies**:
     - pandas<br>
