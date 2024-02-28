@@ -20,7 +20,7 @@ def write_result(reconcile_data, result_data):
     for date, items in result_data.items():
         for item, diff in items.items():
             if diff < 0:
-                match = workorder_data[
+                match = workorder_data.sort_values(by="Date Created", ascending=False)[
                     (workorder_data["Date"] == date)
                     & (workorder_data["Item"] == item)
                     & (workorder_data["Quantity"] == abs(diff))
