@@ -2,9 +2,13 @@ import time
 from verify_files import verify_files
 from calculate_differences import calculate_differences
 from write_result import write_result
+from start_repl import start_repl
 
 
 def main():
+    while True:
+        start_repl()
+
     try:
         verify_files()
 
