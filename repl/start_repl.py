@@ -1,6 +1,13 @@
 import os
 
 
+class CliCommand(object):
+    def __init__(self, name, description, callback):
+        self.name = name
+        self.description = description
+        self.callback = callback
+
+
 def start_repl():
     print(
         """
@@ -15,3 +22,11 @@ def start_repl():
             continue
         else:
             os._exit(0)
+
+
+def getCommands():
+    return {
+        "help": CliCommand(
+            "help", "Get the list of all available commands", command_help
+        )
+    }
