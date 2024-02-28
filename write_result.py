@@ -14,16 +14,17 @@ def write_result(reconcile_data, result_data):
     df_reconcile.to_csv("./result/result_reconcile.csv", index=False)
 
     workorder_data = pd.read_csv("./data/WO.csv")
+    sorted_workorder = workorder_data.sort_values(by="Date Created", ascending=False)
 
     to_delete_woid = []
 
     for date, items in result_data.items():
         for item, diff in items.items():
             if diff < 0:
-                match = workorder_data.sort_values(by="Date Created", ascending=False)[
-                    (workorder_data["Date"] == date)
-                    & (workorder_data["Item"] == item)
-                    & (workorder_data["Quantity"] == abs(diff))
+                match = sorted_workorder[
+                    (sorted_workorder["Date"] == date)
+                    & (sorted_workorder["Item"] == item)
+                    & (sorted_workorder["Quantity"] == abs(diff))
                 ].head(1)["Internal ID"]
 
                 to_delete_woid.append(str(match.item()))
