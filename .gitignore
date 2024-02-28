@@ -3,3 +3,4 @@ data/*.csv
 result/*.txt
 result/*.csv
 .env
+dist/
