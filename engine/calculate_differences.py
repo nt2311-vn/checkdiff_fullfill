@@ -1,7 +1,7 @@
 import time
 import pandas as pd
-from pacman_bar import pacman_bar
-from spinner import spinner
+from graphics.pacman_bar import pacman_bar
+from graphics.spinner import spinner
 
 
 def calculate_differences():

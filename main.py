@@ -1,8 +1,8 @@
 import time
-from verify_files import verify_files
-from calculate_differences import calculate_differences
-from write_result import write_result
-from start_repl import start_repl
+from engine.verify_files import verify_files
+from engine.calculate_differences import calculate_differences
+from engine.write_result import write_result
+from repl.start_repl import start_repl
 
 
 def main():
