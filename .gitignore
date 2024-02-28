@@ -4,3 +4,4 @@ result/*.txt
 result/*.csv
 .env
 dist/
+build/
