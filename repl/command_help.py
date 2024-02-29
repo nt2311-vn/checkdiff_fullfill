@@ -15,6 +15,8 @@ def command_help():
 def getCommands():
     return {
         "help": CliCommand("Get the list of all available commands", command_help),
-        "checkdata": CliCommand("checkdata", command_checkdata),
+        "checkdata": CliCommand(
+            "Check the status of your data in data folder", command_checkdata
+        ),
         "exit": CliCommand("Exit the program", command_exit),
     }
