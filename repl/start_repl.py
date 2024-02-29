@@ -1,4 +1,4 @@
-from repl.cli_command import getCommands
+from repl.command_help import getCommands
 
 
 def start_repl():
