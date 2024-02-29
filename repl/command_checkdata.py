@@ -30,9 +30,16 @@ def command_checkdata():
     min_date = min(list_file_created_date)
     if min_date.strftime("%Y-%m-%d") != datetime.now().strftime("%Y-%m-%d"):
         print(
-            f"WARNING: Once of your data is downloaded on {min_date.strftime("%d/%m/%Y %H:%M:%S")}, please download new one or begin the program by typing start"
+            f"WARNING: Once of your data is downloaded on {min_date.strftime("%d/%m/%Y %H:%M:%S")}, please download new one following the link below:"
         )
-        print("")
+        print(
+            "For IF: https://5574610.app.netsuite.com/app/common/search/searchresults.nl?searchid=2243&whence="
+        )
+        print(
+            "For WO: https://5574610.app.netsuite.com/app/common/search/searchresults.nl?searchid=2637&whence="
+        )
+        print("Or you could begin the program by typing start")
+        print()
 
     else:
         print("Your data is good to go, type start to begin analyzing data")
