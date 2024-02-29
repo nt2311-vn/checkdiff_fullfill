@@ -3,9 +3,13 @@ from engine.write_result import write_result
 
 
 def command_start():
-    reconcile_table, result_table = calculate_differences()
-    write_result(reconcile_table, result_table)
+    try:
+        reconcile_table, result_table = calculate_differences()
+        write_result(reconcile_table, result_table)
 
-    print("Analyzing completed. Please check the resulls in the result folder.")
-    print("Type exit or press Ctrl+C to exit the program.")
-    print("")
+        print("Analyzing completed. Please check the resulls in the result folder.")
+        print("Type exit or press Ctrl+C to exit the program.")
+        print("")
+
+    except Exception as e:
+        print(e)

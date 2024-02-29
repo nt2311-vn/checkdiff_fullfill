@@ -7,14 +7,15 @@ def command_checkdata():
 
     if len(num_files) != 2:
         print("Required exactly two files: IF and WO in the data folder")
-        print("Please the download and type start to begin the program")
+        print("Please download the data and type start to begin the program")
         print(
             "For IF: https://5574610.app.netsuite.com/app/common/search/searchresults.nl?searchid=2243&whence="
         )
         print(
             "For WO: https://5574610.app.netsuite.com/app/common/search/searchresults.nl?searchid=2637&whence="
         )
-        print("If you want to exit the program. Type exit or press Ctrl + C")
+        print("To exit the program. Type exit or press Ctrl + C")
+        return
 
     list_filetypes = []
     list_file_created_date = []
@@ -30,9 +31,11 @@ def command_checkdata():
 
     if not all([filetype == "csv" for filetype in list_filetypes]):
         print("Your input in the data folder must be in csv format")
+        return
 
     if not all([file_name in ["IF", "WO"] for file_name in list_file_name]):
         print("Your data must be name IF and WO for name convention")
+        return
 
     # If min_date is not to day print to awareness
     min_date = min(list_file_created_date)
