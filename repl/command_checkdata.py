@@ -2,7 +2,7 @@ import os
 from datetime import datetime
 
 
-def command_checkdata():
+def command_checkdata() -> bool:
     num_files = [f for f in os.listdir("./data/") if f not in [".gitkeep"]]
 
     if len(num_files) != 2:
@@ -15,7 +15,7 @@ def command_checkdata():
             "For WO: https://5574610.app.netsuite.com/app/common/search/searchresults.nl?searchid=2637&whence="
         )
         print("If you want to exit the program. Type exit or press Ctrl + C")
-        return
+        return False
 
     list_filetypes = []
     list_file_created_date = []
@@ -31,11 +31,11 @@ def command_checkdata():
 
     if not all([filetype == "csv" for filetype in list_filetypes]):
         print("Your input in the data folder must be in csv format")
-        return
+        return False
 
     if not all([file_name in ["IF", "WO"] for file_name in list_file_name]):
         print("Your data must be name IF and WO for name convention")
-        return
+        return False
 
     # If min_date is not to day print to awareness
     min_date = min(list_file_created_date)
@@ -51,7 +51,9 @@ def command_checkdata():
         )
         print("Or you could begin the program by typing start")
         print()
+        return True
 
     else:
         print("Your data is good to go, type start to begin analyzing data")
         print("")
+        return True
