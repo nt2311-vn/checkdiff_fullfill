@@ -1,6 +1,7 @@
 from repl.cli_command import CliCommand
 from repl.command_exit import command_exit
 from repl.command_checkdata import command_checkdata
+from repl.command_start import command_start
 
 
 def command_help():
@@ -18,5 +19,6 @@ def getCommands():
         "checkdata": CliCommand(
             "Check the status of your data in data folder", command_checkdata
         ),
+        "start": CliCommand("Start the program to analyze the data", command_start),
         "exit": CliCommand("Exit the program", command_exit),
     }
