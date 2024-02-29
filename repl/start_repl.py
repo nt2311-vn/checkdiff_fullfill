@@ -19,7 +19,9 @@ def start_repl():
         command = cleanInput(user_input)[0]
 
         if command not in available_commands:
-            print("Invalid command")
+            print(
+                f"{command} is an invalid command, type help to see the availale lists"
+            )
             continue
 
         available_commands[command].callback()
