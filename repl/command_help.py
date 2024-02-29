@@ -1,5 +1,6 @@
 from repl.cli_command import CliCommand
 from repl.command_exit import command_exit
+from repl.command_checkdata import command_checkdata
 
 
 def command_help():
