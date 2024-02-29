@@ -22,7 +22,7 @@ def calculate_differences():
 
     print("Start checking data...")
 
-    spinner(duration=3)
+    spinner(duration=5)
 
     for index, date in enumerate(set_unique_date, start=1):
         for item in set_unique_item:

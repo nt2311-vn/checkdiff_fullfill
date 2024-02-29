@@ -1,5 +1,6 @@
 import os
 from datetime import datetime
+from repl.command_start import command_start
 
 
 def command_checkdata():
@@ -49,9 +50,20 @@ def command_checkdata():
         print(
             "For WO: https://5574610.app.netsuite.com/app/common/search/searchresults.nl?searchid=2637&whence="
         )
-        print("Type start to begin the program any way")
+
+        user_input = input("If you want continue with the current data type (Y) Yes: ")
+
+        if user_input.lower() in ["yes", "y"]:
+            command_start()
+
+        else:
+            return
 
     else:
         print("Your data is good to go, type start to begin analyzing data")
-        print("")
-        print("Type start to begin the program")
+        user_input = input("Type (Y) to start the program: ")
+
+        if user_input.lower() in ["yes", "y"]:
+            command_start()
+        else:
+            return

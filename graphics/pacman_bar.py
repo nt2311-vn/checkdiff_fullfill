@@ -2,7 +2,7 @@ import sys
 
 
 def pacman_bar(current_index, total_number):
-    bar_length = 90
+    bar_length = 0
     fill_char = "="
     lead_char = ">"
 
