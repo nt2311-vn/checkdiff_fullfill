@@ -12,4 +12,5 @@ def command_start():
         print("")
 
     except Exception as e:
-        print(e)
+        print(f"Error at start program {e}")
+        print("Type exit or press Ctrl+C to exit the program.")
