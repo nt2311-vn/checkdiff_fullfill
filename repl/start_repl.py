@@ -6,7 +6,7 @@ def start_repl():
         """
 (c) Copy right nt2311-vn
     All right reserved.
-    Welcome to the check diff fulfillment program. Type ? or help to list commands"""
+    Welcome to the check diff fulfillment program. Type help to list commands"""
     )
     while True:
         user_input = input("> ")
