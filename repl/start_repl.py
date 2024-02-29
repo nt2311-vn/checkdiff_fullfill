@@ -1,12 +1,4 @@
-import os
-from typing import Callable
-
-
-class CliCommand:
-    def __init__(self, name: str, description: str, callback: Callable[[], None]):
-        self.name = name
-        self.description = description
-        self.callback = callback
+from repl.cli_command import getCommands
 
 
 def start_repl():
@@ -22,22 +14,17 @@ def start_repl():
         if not user_input:
             continue
 
+        available_commands = getCommands()
+
         command = cleanInput(user_input)[0]
 
+        if command not in available_commands:
+            print("Invalid command")
+            continue
 
-def getCommands():
-    return {
-        "help": CliCommand(
-            "help", "Get the list of all available commands", command_help
-        ),
-        "exit": CliCommand("exit", "Exit the program", command_exit),
-    }
+        available_commands[command].callback()
 
 
 def cleanInput(input: str) -> list[str]:
     words = input.lower().split(" ")
     return words
-
-
-def command_exit():
-    os._exit(0)
