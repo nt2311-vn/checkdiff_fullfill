@@ -2,7 +2,6 @@ from typing import Callable
 
 
 class CliCommand:
-    def __init__(self, name: str, description: str, callback: Callable[[], None]):
-        self.name = name
+    def __init__(self, description: str, callback: Callable[[], None]):
         self.description = description
         self.callback = callback

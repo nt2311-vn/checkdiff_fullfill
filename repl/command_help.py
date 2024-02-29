@@ -6,13 +6,14 @@ def command_help():
     available_commands = getCommands()
 
     for command in available_commands:
-        print(f"{command} - {available_commands[command].description}")
+        print(f"    {command} - {available_commands[command].description}")
+
+    print("")
 
 
 def getCommands():
     return {
-        "help": CliCommand(
-            "help", "Get the list of all available commands", command_help
-        ),
-        "exit": CliCommand("exit", "Exit the program", command_exit),
+        "help": CliCommand("Get the list of all available commands", command_help),
+        "checkdata": CliCommand("checkdata", command_checkdata),
+        "exit": CliCommand("Exit the program", command_exit),
     }
