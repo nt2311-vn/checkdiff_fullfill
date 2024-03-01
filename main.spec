@@ -20,7 +20,7 @@ exe = EXE(
     a.scripts,
     [],
     exclude_binaries=True,
-    name='check_fulfill',
+    name='win64_check_fulfillv1.0.0',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
