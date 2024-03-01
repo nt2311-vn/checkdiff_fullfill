@@ -1,12 +1,14 @@
 # Checking Differences between Fulfillment and Work order creation for each item code in each day
 
-## Important Information:
+##‼️ Important Information:
 The package it self is a tool help you quickly check differences between quantity fulfill with quantity in work order creation.
 But it **is your responsibilities** to download and provide data **CORRECTLY**
 
-Below are two links, already set up in Netsuite, for the data set of workorder and fulfillment. I suggest using my dataset if you don't have a well set up one:
+🔗 Below are two links, already set up in Netsuite, for the data set of workorder and fulfillment. I suggest using my dataset if you don't have a well set up one:
 - **IF**: [Item fullfilment dataset](https://5574610.app.netsuite.com/app/common/search/searchresults.nl?searchid=2243&whence=)
 - **WO**: [Work order dataset](https://5574610.app.netsuite.com/app/common/search/searchresults.nl?searchid=2637&whence=)
+
+👍 Rule of thumbs on how to get the proper dataset:
 
 ### Required installs
 To use this package, you need to install the following:
