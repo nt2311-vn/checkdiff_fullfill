@@ -1,6 +1,6 @@
 # Checking Differences between Fulfillment and Work order creation for each item code in each day
 
-##‼️ Important Information:
+## ‼️Important Information:
 The package it self is a tool help you quickly check differences between quantity fulfill with quantity in work order creation.
 But it **is your responsibilities** to download and provide data **CORRECTLY**
 
@@ -9,6 +9,9 @@ But it **is your responsibilities** to download and provide data **CORRECTLY**
 - **WO**: [Work order dataset](https://5574610.app.netsuite.com/app/common/search/searchresults.nl?searchid=2637&whence=)
 
 👍 Rule of thumbs on how to get the proper dataset:
+1. Determine the period you want to reconcile, if that period is already closed. Have no worries to get all the data within that period.
+2. If the period is not closed, if your current date is ahead of the end date of that period +2, you can get all the data within that period.
+3. Otherwise, you need to get the data from the start date of that period to the current date -1.
 
 ### Required installs
 To use this package, you need to install the following:
