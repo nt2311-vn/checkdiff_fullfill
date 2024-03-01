@@ -19,4 +19,5 @@ But it **is your responsibilities** to download and provide data **CORRECTLY**
 
 ### Installation
 Check out the release note below for the latest version of the program. Choose the zip file that matches your operating system to download:
+[✅ Release Note](https://github.com/nt2311-vn/checkdiff_fullfill/releases)
 
