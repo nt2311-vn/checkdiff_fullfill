@@ -7,7 +7,7 @@
 ## Showcases
 
 <p align="right">
-    <img src="https://github.com/nt2311-vn/checkdiff_fullfill/blob/main/assets/showcase.gif" width="400" height="300" align="right">
+    <img src="https://github.com/nt2311-vn/checkdiff_fullfill/blob/main/assets/showcase.gif" width="400" height="300">
 </p>
 
 
