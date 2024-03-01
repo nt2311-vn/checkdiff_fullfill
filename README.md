@@ -1,4 +1,7 @@
-<img src="https://github.com/nt2311-vn/checkdiff_fullfill/blob/main/assets/checkdiff_logo.png" width="200" height="200" align="center" />
+<p align="center">
+<img src="https://github.com/nt2311-vn/checkdiff_fullfill/blob/main/assets/checkdiff_logo.png" width="200" height="200" align="center">
+</p>
+
 # Checking Differences between Fulfillment and Work order creation for each item code in each day
 
 ## ‼️Important Information:
