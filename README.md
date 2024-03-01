@@ -4,10 +4,10 @@
 
 # Checking Differences between Fulfillment and Work order creation for each item code in each day
 
-## Showcases
+## 🎥Showcases
 
 <p align="left">
-    <img src="https://github.com/nt2311-vn/checkdiff_fullfill/blob/main/assets/showcase.gif" width="600" height="400">
+    <img src="https://github.com/nt2311-vn/checkdiff_fullfill/blob/main/assets/showcase.gif" width="800" height="500">
 </p>
 
 
