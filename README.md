@@ -1,3 +1,4 @@
+![Checking Differences between Fulfillment and Work order](https://github.com/nt2311-vn/checkdiff_fullfill/blob/main/assets/checkdiff_logo.png)
 # Checking Differences between Fulfillment and Work order creation for each item code in each day
 
 ## ‼️Important Information:
