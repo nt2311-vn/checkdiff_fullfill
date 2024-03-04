@@ -32,4 +32,7 @@ def write_result(reconcile_data, result_data):
     print(f"To delete list: {to_delete_woid}")
 
     with open("result/result_diff.txt", "w") as file:
-        file.write(",".join(to_delete_woid))
+        if len(to_delete_woid) == 0:
+            file.write("No work order could be found to delete")
+        else:
+            file.write(",".join(to_delete_woid))
