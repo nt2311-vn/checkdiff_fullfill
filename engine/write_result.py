@@ -27,6 +27,9 @@ def write_result(reconcile_data, result_data):
                     & (sorted_workorder["Quantity"] == abs(diff))
                 ].head(1)["Internal ID"]
 
+                if len(match) != 1:
+                    continue
+
                 to_delete_woid.append(str(match.item()))
 
     print(f"To delete list: {to_delete_woid}")
